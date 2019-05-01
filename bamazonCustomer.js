@@ -19,7 +19,7 @@ function display() {
       options = `Item ID: ${res[i].id} ||| `;
       options += `Product name: ${res[i].product_name} ||| `;
       options += `Department: ${res[i].department_name} " ||| `;
-      options += `Price: ${res[i].price} ||| `;
+      options += `Price: ${res[i].price}`;
       console.log(options)
     };
     start()
