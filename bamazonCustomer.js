@@ -14,13 +14,13 @@ var connection = mysql.createConnection({
 function display() {
   connection.query("SELECT * FROM products", function (err, res) {
     if (err) throw err;
-    var selectString = "";
+    var options = "";
     for (var i = 0; i < res.length; i++) {
-      selectString = `Item ID: ${res[i].id} | `;
-      selectString += `Product name: ${res[i].product_name} | `;
-      selectString += `Department: ${res[i].department_name} " | `;
-      selectString += `Price: ${res[i].price} | `;
-      console.log(selectString)
+      options = `Item ID: ${res[i].id} ||| `;
+      options += `Product name: ${res[i].product_name} ||| `;
+      options += `Department: ${res[i].department_name} " ||| `;
+      options += `Price: ${res[i].price} ||| `;
+      console.log(options)
     };
     start()
   });
